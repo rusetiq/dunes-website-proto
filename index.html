@@ -431,6 +431,8 @@
                     margin-right: 0
                 }
             }
+
+            
         </style>
     </head>
     <body class="home page-template-default page page-id-416 et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_secondary_nav_enabled et_secondary_nav_only_menu et_primary_nav_dropdown_animation_expand et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
@@ -2081,3 +2083,35 @@
         </style>
     </body>
 </html>
+
+
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+        webhookUrl: 'https://n8n.srv1136039.hstgr.cloud/webhook/6aca38a6-49aa-435e-99e5-851a4446fa2c/chat',
+        webhookConfig: {
+            method: 'POST',
+            headers: {}
+        },
+        target: '#n8n-chat',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: 'en',
+        initialMessages: [
+            /* 'Hi there! 👋', */
+            'Hello, how can I help you today?'
+        ],
+        i18n: {
+            en: {
+                title: 'HELLO! 👋',
+                subtitle: "I'm ChatDIS. I'm here to help you 24/7.",
+                // footer: 'powered by IT',
+                getStarted: 'New Conversation',
+                inputPlaceholder: 'Type your question..',
+            },
+        },
+    });
+</script>
