@@ -2248,20 +2248,34 @@
             method: 'POST',
             headers: {}
         },
-        style: `
-            :host {
-                --chat--color-primary: #94030f;
-                --chat--color-primary-shade-50: #690b13;
-                --chat--color-secondary: #eab830;
-            }
-            .chat-header {
+        css: `
+            /* 1. The Launcher Button (The Circle) */
+            .chat-toggle {
                 background-color: #94030f !important;
             }
+
+            /* 2. The Header Bar */
+            .chat-header {
+                background-color: #94030f !important;
+                color: #ffffff !important;
+            }
+
+            /* 3. User Message Bubbles (The Gold/Beige) */
             .chat-message-user .chat-message-content {
                 background-color: #eab830 !important;
-                color: #000 !important;
+                color: #000000 !important;
             }
-        `,
+
+            /* 4. The "Send" Button Icon */
+            .chat-input-send svg {
+                fill: #94030f !important;
+            }
+
+            /* 5. The Get Started Button */
+            .chat-welcome-screen-button {
+                background-color: #94030f !important;
+            }
+        `
         target: '#n8n-chat',
         mode: 'window',
         chatInputKey: 'chatInput',
@@ -2271,7 +2285,7 @@
         defaultLanguage: 'en',
         initialMessages: [
             /* 'Hi there! 👋', */
-            'Hello, how can I help you today?'
+            'Hello, I am ChatDIS. how can I help you today?'
         ],
         i18n: {
             en: {
